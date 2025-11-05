@@ -55,7 +55,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/daxtratech/${{ inputs.image-name || github.event.repository.name }}${{ inputs.image-extra }}
+            ghcr.io/deathsfaction/${{ inputs.image-name || github.event.repository.name }}${{ inputs.image-extra }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -129,7 +129,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ secrets.DOCKER_REGISTRY }}/daxtra/${{ inputs.image-name || github.event.repository.name }}${{ inputs.image-extra }}
+            ${{ secrets.DOCKER_REGISTRY }}/deathsfaction/${{ inputs.image-name || github.event.repository.name }}${{ inputs.image-extra }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
